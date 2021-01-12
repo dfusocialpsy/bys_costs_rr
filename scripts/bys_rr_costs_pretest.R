@@ -10,7 +10,7 @@
 #*##                                      #*##
 #*###*###*###*###*###*###*###*###*###*###*##*#
 
-if(!require(arsenal)){install.packages('arsenal')}
+
 if(!require(formattable)){install.packages('formattable')}
 if(!require(janitor)){install.packages('janitor')}
 if(!require(tidyverse)){install.packages('tidyverse')}
@@ -179,7 +179,12 @@ ds %>%
 ds_ready <- cbind(a, b, c, d, e, f, g)
 
 
-#### Compute descripitve values for images ####
+#*###*###*###*###*###*###*###*###*###*###*##*##*#
+#*##                                         #*##
+####  Compute descripitve values for images  ####
+#*##                                         #*##
+#*###*###*###*###*###*###*###*###*###*###*##*##*#
+
 ds_ready %>% 
   arrange(id, stim_seq) %>% 
   group_by(stimulus) %>% 
